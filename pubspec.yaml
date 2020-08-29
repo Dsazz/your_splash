@@ -2,7 +2,7 @@ name: your_splash
 description: This is your lightweight splash screen with timer and Future delay
 version: 0.0.1
 author: Stanislav Stepanenko <dsazztazz@gmail.com>
-homepage:
+homepage: https://github.com/Dsazz/your_splash
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

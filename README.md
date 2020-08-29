@@ -1,11 +1,10 @@
 # your_splash
 
-This is your lightweight splash screen.
+A Flutter implementation of splash screen
 
 ## Features
 * Supports splash screen with the Future callback
 * Supports splash screen with timer
-* Supports iOS and Android.
 
 ## Getting Started
 
@@ -108,7 +107,7 @@ class Home extends StatelessWidget {
 
 How can I animate transition between the splash screen and navigation page?
 
-
+![Overview](https://github.com/Dsazz/your_splash/blob/master/doc/images/splash.gif?raw=true)
 
 ```dart
 navigate: PageRouteBuilder(
@@ -123,4 +122,4 @@ navigate: PageRouteBuilder(
   },
 ```
 
-You can check all examples [here](#).
+You can see all examples [here](https://github.com/Dsazz/your_splash/tree/master/example)
