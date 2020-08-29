@@ -1,0 +1,16 @@
+name: your_splash
+description: This is your lightweight splash screen with timer and Future delay
+version: 0.0.1
+author: Stanislav Stepanenko <dsazztazz@gmail.com>
+homepage:
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
