@@ -1,5 +1,5 @@
 name: your_splash
-description: This is your lightweight splash screen with timer and Future delay
+description: A Flutter implementation of splash screen
 version: 0.0.1
 homepage: https://github.com/Dsazz/your_splash
 
