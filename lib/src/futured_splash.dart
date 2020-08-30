@@ -22,10 +22,10 @@ class FuturedSplashScreenState extends SplashScreenState<FuturedSplashScreen> {
   @override
   void initState() {
     super.initState();
-    execFuture();
+    _execFuture();
   }
 
-  void execFuture() async {
+  void _execFuture() async {
     try {
       await widget.future();
     } catch (err) {

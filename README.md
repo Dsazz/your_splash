@@ -1,6 +1,6 @@
 # your_splash
 
-A Flutter implementation of splash screen
+A Flutter implementation of splash screen. Supports Android and IOS.
 
 ## Features
 * Supports splash screen with the Future callback

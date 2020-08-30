@@ -1,6 +1,6 @@
 name: your_splash
-description: A Flutter implementation of splash screen
-version: 0.1.0
+description: A Flutter implementation of splash screen. Supports Android and IOS.
+version: 0.1.2
 homepage: https://github.com/Dsazz/your_splash
 
 environment:
