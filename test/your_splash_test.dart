@@ -19,11 +19,11 @@ void main() {
         throwsA(isAssertionError),
       );
       expect(
-        () => FuturedSplashScreen(future: loadFuture, navigate: "route"),
+        () => FuturedSplashScreen(future: loadFuture, route: "route"),
         throwsA(isAssertionError),
       );
       expect(
-        () => FuturedSplashScreen(future: loadFuture, body: body, navigate: 99),
+        () => FuturedSplashScreen(future: loadFuture, body: body, route: 99),
         throwsA(isAssertionError),
       );
     });
@@ -42,14 +42,14 @@ void main() {
       FuturedSplashScreen futuredSplash = FuturedSplashScreen(
         future: loadFuture,
         body: body,
-        navigate: "route",
+        route: "route",
       );
       expect(
         futuredSplash.toString(),
         SplashScreen.futured(
           future: loadFuture,
           body: body,
-          navigate: "route",
+          route: "route",
         ).toString(),
       );
     });
@@ -59,26 +59,25 @@ void main() {
     test('assert with missing and invalid args', () {
       expect(() => TimedSplashScreen(), throwsA(isAssertionError));
       expect(
-        () => TimedSplashScreen(seconds: -1, body: body, navigate: "route"),
+        () => TimedSplashScreen(seconds: -1, body: body, route: "route"),
         throwsA(isAssertionError),
       );
       expect(() => TimedSplashScreen(body: body), throwsA(isAssertionError));
-      expect(() => TimedSplashScreen(navigate: "route"),
-          throwsA(isAssertionError));
-      expect(() => SplashScreen.timed(navigate: "route"),
-          throwsA(isAssertionError));
+      expect(
+          () => TimedSplashScreen(route: "route"), throwsA(isAssertionError));
+      expect(
+          () => SplashScreen.timed(route: "route"), throwsA(isAssertionError));
     });
 
     test('success build', () {
       TimedSplashScreen timedSplash = TimedSplashScreen(
         seconds: 1,
         body: body,
-        navigate: "route",
+        route: "route",
       );
       expect(
         timedSplash.toString(),
-        SplashScreen.timed(seconds: 1, body: body, navigate: "route")
-            .toString(),
+        SplashScreen.timed(seconds: 1, body: body, route: "route").toString(),
       );
     });
   });

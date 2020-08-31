@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: SplashScreen.timed(
         seconds: 3,
-        navigate: MaterialPageRoute(builder: (_) => Home()),
+        route: MaterialPageRoute(builder: (_) => Home()),
         body: DefaultBody(),
       ),
     );

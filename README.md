@@ -38,7 +38,7 @@ A `FuturedSplashScreen` requires next arguments:
 | Parameter     | Description   |
 | ------------- | ------------- |
 | `future`   | This is your Future callback for delay  |
-| `navigate` | This is a dynamic argument. Can be `String` name of route or `PageRoute` instance |
+| `route`    | This is a dynamic argument. Can be `String` name of route or `PageRoute` instance |
 | `body`     | This is a body of your splash screen |
 
 A `TimedSplashScreen` requires next arguments:
@@ -46,7 +46,7 @@ A `TimedSplashScreen` requires next arguments:
 | Parameter     | Description   |
 | ------------- | ------------- |
 | `seconds`  | This is a duration in seconds for how long your splash screen will be displayed |
-| `navigate` | This is a dynamic argument. Can be `String` name of route or `PageRoute` instance |
+| `route`    | This is a dynamic argument. Can be `String` name of route or `PageRoute` instance |
 | `body`     | This is a body of your splash screen |
 
 ### Examples
@@ -68,7 +68,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: SplashScreen.timed(
         seconds: 3,
-        navigate: MaterialPageRoute(builder: (_) => Home()),
+        route: MaterialPageRoute(builder: (_) => Home()),
         body: Scaffold(
           body: InkWell(
             child: Container(
@@ -110,7 +110,7 @@ How can I animate transition between the splash screen and navigation page?
 ![Overview](https://github.com/Dsazz/your_splash/blob/master/doc/images/splash.gif?raw=true)
 
 ```dart
-navigate: PageRouteBuilder(
+route: PageRouteBuilder(
   pageBuilder: (context, animation, secondaryAnimation) => Home(),
   transitionDuration: Duration(seconds: 1),
   transitionsBuilder: (_, animation, secAnim, child) {
