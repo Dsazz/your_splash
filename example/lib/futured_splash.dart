@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: SplashScreen.futured(
         future: loadFuture,
-        navigate: MaterialPageRoute(builder: (_) => Home()),
+        route: MaterialPageRoute(builder: (_) => Home()),
         body: DefaultBody(),
       ),
     );

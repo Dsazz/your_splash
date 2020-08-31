@@ -27,7 +27,7 @@ class Routers {
     return {
       SPLASH_SCREEN: (context) => SplashScreen.timed(
             seconds: 5,
-            navigate: HOME,
+            route: HOME,
             body: DefaultBody(),
           ),
       HOME: (context) => Home(),
