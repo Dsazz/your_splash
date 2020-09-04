@@ -13,13 +13,13 @@ void main() {
 
   group('FuturedSplashScreen', () {
     test('assert with missing and invalid args', () {
-      expect(() => FuturedSplashScreen(), throwsA(isAssertionError));
       expect(
-        () => FuturedSplashScreen(future: loadFuture, body: body),
+        () => FuturedSplashScreen(future: loadFuture, route: null, body: body),
         throwsA(isAssertionError),
       );
       expect(
-        () => FuturedSplashScreen(future: loadFuture, route: "route"),
+        () =>
+            FuturedSplashScreen(future: loadFuture, route: "route", body: null),
         throwsA(isAssertionError),
       );
       expect(
@@ -32,6 +32,7 @@ void main() {
       expect(() async {
         await tester.pumpWidget(SplashScreen.futured(
           future: loadFuture,
+          route: null,
           body: body,
         ));
         await tester.pumpAndSettle(Duration(seconds: 1));
@@ -57,16 +58,22 @@ void main() {
 
   group('TimedSplashScreen', () {
     test('assert with missing and invalid args', () {
-      expect(() => TimedSplashScreen(), throwsA(isAssertionError));
       expect(
         () => TimedSplashScreen(seconds: -1, body: body, route: "route"),
         throwsA(isAssertionError),
       );
-      expect(() => TimedSplashScreen(body: body), throwsA(isAssertionError));
       expect(
-          () => TimedSplashScreen(route: "route"), throwsA(isAssertionError));
+          () => TimedSplashScreen(
+                seconds: 1,
+                body: body,
+                route: null,
+              ),
+          throwsA(isAssertionError));
+      expect(() => TimedSplashScreen(seconds: 1, body: null, route: "route"),
+          throwsA(isAssertionError));
       expect(
-          () => SplashScreen.timed(route: "route"), throwsA(isAssertionError));
+          () => SplashScreen.timed(seconds: null, body: null, route: "route"),
+          throwsA(isAssertionError));
     });
 
     test('success build', () {
