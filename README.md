@@ -1,5 +1,7 @@
 # your_splash
 
+![Release status](https://github.com/Dsazz/your_splash/workflows/Release/badge.svg) [![codecov](https://codecov.io/gh/Dsazz/your_splash/branch/master/graph/badge.svg)](https://codecov.io/gh/Dsazz/your_splash)
+
 A Flutter implementation of splash screen. Supports Android and IOS.
 
 ## Features
@@ -109,7 +111,7 @@ How can I animate transition between the splash screen and navigation page?
 
 ![Overview](https://github.com/Dsazz/your_splash/blob/master/doc/images/splash.gif?raw=true)
 
-```dart
+```
 route: PageRouteBuilder(
   pageBuilder: (context, animation, secondaryAnimation) => Home(),
   transitionDuration: Duration(seconds: 1),
