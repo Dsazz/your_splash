@@ -1,6 +1,9 @@
 # your_splash
 
-![Tests status](https://github.com/Dsazz/your_splash/workflows/tests/badge.svg) [![codecov](https://codecov.io/gh/Dsazz/your_splash/branch/master/graph/badge.svg)](https://codecov.io/gh/Dsazz/your_splash)
+[![pub package](https://img.shields.io/pub/v/your_splash?style=flat-square)](https://pub.dev/packages/your_splash) 
+[![license](https://img.shields.io/github/license/Dsazz/your_splash?style=flat-square)](https://github.com/Dsazz/your_splash/blob/master/LICENSE)
+![build](https://img.shields.io/github/workflow/status/Dsazz/your_splash/tests?style=flat-square)
+[![codecov](https://img.shields.io/codecov/c/github/Dsazz/your_splash?style=flat-square)](https://codecov.io/gh/Dsazz/your_splash)
 
 A Flutter implementation of splash screen. Supports Android and IOS.
 
