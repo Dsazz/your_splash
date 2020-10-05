@@ -4,12 +4,13 @@
 [![license](https://img.shields.io/github/license/Dsazz/your_splash?style=flat-square)](https://github.com/Dsazz/your_splash/blob/master/LICENSE)
 ![build](https://img.shields.io/github/workflow/status/Dsazz/your_splash/tests?style=flat-square)
 [![codecov](https://img.shields.io/codecov/c/github/Dsazz/your_splash?style=flat-square)](https://codecov.io/gh/Dsazz/your_splash)
+[![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg?style=flat-square)](https://saythanks.io/to/dsazztazz%40gmail.com)
 
 A Flutter implementation of splash screen. Supports Android and IOS.
 
 ## Features
-* Supports splash screen with the Future callback
-* Supports splash screen with timer
+  * Supports splash screen with the Future callback
+  * Supports splash screen with timer
 
 ## Getting Started
 
@@ -30,13 +31,13 @@ import 'package:your_splash/your_splash.dart';
 ### Constructors
 
 This package comes with 2 kinds of splash screen actions:
-* `FuturedSplashScreen` 
-* `TimedSplashScreen`
+  * `FuturedSplashScreen` 
+  * `TimedSplashScreen`
 
 You can create a splash screen in two different ways:
 
-* by calling `FuturedSplashScreen` or `TimedSplashScreen` constructor and passing required arguments.
-* by calling `SplashScreen.futured` or `SplashScreen.timed` constructor respectively.
+  * by calling `FuturedSplashScreen` or `TimedSplashScreen` constructor and passing required arguments.
+  * by calling `SplashScreen.futured` or `SplashScreen.timed` constructor respectively.
 
 A `FuturedSplashScreen` requires next arguments:
 
