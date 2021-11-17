@@ -10,12 +10,12 @@ abstract class SplashScreen extends StatefulWidget {
   final dynamic route;
 
   /// The [body] of splash screen
-  final Widget body;
+  final Widget? body;
 
   /// Describes the base splash screen constructor
   SplashScreen({
-    @required this.route,
-    @required this.body,
+    required this.route,
+    required this.body,
   })  : assert(route != null),
         assert(route is String || route is PageRoute,
             "widget.route must either be a String or instance of PageRoute"),
@@ -48,9 +48,9 @@ abstract class SplashScreen extends StatefulWidget {
   /// }
   /// {@end-tool}
   factory SplashScreen.futured({
-    FuturedSplashScreenCallback future,
-    dynamic route,
-    Widget body,
+    required FuturedSplashScreenCallback future,
+    required dynamic route,
+    required Widget body,
   }) =>
       FuturedSplashScreen(
         future: future,
@@ -80,9 +80,9 @@ abstract class SplashScreen extends StatefulWidget {
   /// }
   /// {@end-tool}
   factory SplashScreen.timed({
-    int seconds,
-    dynamic route,
-    Widget body,
+    int? seconds,
+    required dynamic route,
+    required Widget? body,
   }) =>
       TimedSplashScreen(
         seconds: seconds,
@@ -95,7 +95,7 @@ abstract class SplashScreenState<Page extends SplashScreen>
     extends State<Page> {
   @override
   Widget build(BuildContext context) {
-    return widget.body;
+    return widget.body ?? const SizedBox();
   }
 
   /// Replace the splash screen by pushing the route
