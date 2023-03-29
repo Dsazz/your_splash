@@ -38,11 +38,10 @@ class FuturedSplashScreen extends SplashScreen {
   /// }
   /// {@end-tool}
   FuturedSplashScreen({
-    @required this.future,
-    @required dynamic route,
-    @required Widget body,
-  })  : assert(future != null),
-        super(route: route, body: body);
+    required this.future,
+    required dynamic route,
+    required Widget? body,
+  }) : super(route: route, body: body);
 
   @override
   FuturedSplashScreenState createState() => FuturedSplashScreenState();

@@ -7,7 +7,7 @@ import 'base_splash.dart';
 /// A class for providing splash screen based on Timer delaying
 class TimedSplashScreen extends SplashScreen {
   /// This is a duration in [seconds] for how long your splash screen will be displayed
-  final int seconds;
+  final int? seconds;
 
   /// Creates a [TimedSplashScreen] widget
   ///
@@ -31,9 +31,9 @@ class TimedSplashScreen extends SplashScreen {
   /// }
   /// {@end-tool}
   TimedSplashScreen({
-    @required this.seconds,
-    Widget body,
-    dynamic route,
+    required this.seconds,
+    required Widget? body,
+    required dynamic route,
   })  : assert(seconds is int && seconds > 0),
         super(route: route, body: body);
 
@@ -46,6 +46,6 @@ class _TimedSplashScreenState extends SplashScreenState<TimedSplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: widget.seconds), () => navigateTo(widget.route));
+    Timer(Duration(seconds: widget.seconds!), () => navigateTo(widget.route));
   }
 }
